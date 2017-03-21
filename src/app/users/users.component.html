@@ -1,3 +1,36 @@
-<p>
-  users works!
-</p>
+<div class="main-content">
+  <md-tab-group>
+      <md-tab label="Gallery">
+        <md-grid-list cols="4" row--min-hight="300px">
+          <md-grid-tile *ngFor="let spaceScreen of spaceScreens; let i = index ">
+            <img md-card-image src="{{ spaceScreen.img }}">
+            
+            <md-grid-tile-footer>
+              <md-card-content>
+                <p>{{ spaceScreen.description }}</p>
+              </md-card-content>
+              <md-card-actions>
+                <button md-button (click)="likeMe(i)">
+                  <md-icon [class.red-color]="spaceScreen.liked === true">favorite</md-icon> LIKE
+                </button>
+                <button md-button (click)="deleteMe(i)">
+                  <md-icon>delete</md-icon> DELETE
+                </button>
+              </md-card-actions>
+            </md-grid-tile-footer>
+
+          </md-grid-tile>
+        </md-grid-list>
+      </md-tab>
+      <md-tab label="Settings">
+        <div id = "page-padding">
+          <h1>Settings</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <label>#Thumnails</label><br>
+
+          <md-slider class="md-slider-horizontal" ngModel=maxStuff showTicks="true" max="5" min="0" step="1" thumbLabel="true" value="5"></md-slider>
+          <md-slide-toggle>Some Setting</md-slide-toggle>
+        </div>
+      </md-tab>
+  </md-tab-group>
+</div>

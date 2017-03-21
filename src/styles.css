@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/core/theming/prebuilt/indigo-pink.css";
+/*@import "~@angular/material/core/theming/prebuilt/indigo-pink.css"; */
 
 .spacer {
     -webkit-box-flex: 1;
@@ -37,10 +37,15 @@ label {
     padding-right: 0.5em;
 }
 
-html, body, material-app, md-sidenav-container, .main-content {
+html, body, md-sidenav-container, router-outlet {
   margin: 0;
   width: 100%;
   height: 100%;
+}
+
+.main-content {
+    padding-left:2em;
+    padding-top: 0.5em;
 }
 
 .active-link {

@@ -1,0 +1,90 @@
+
+<md-toolbar color="primary">
+    <button md-icon-button (click)="sidenav.toggle()">
+      <md-icon>menu</md-icon>
+    </button>
+    <!--<md-icon class="icon_35">pi-box</md-icon>-->
+    <img src="assets/images/chems-icon_i.png" class="icon-chems">
+    <span>{{title}}</span>
+    <span class="spacer"></span>
+    <button md-icon-button>
+      <md-icon>account_circle</md-icon>
+    </button>
+    <button md-icon-button [mdMenuTriggerFor]="menu">
+      <md-icon>more_vert</md-icon>
+    </button>
+    <md-menu #menu="mdMenu">
+      <button md-menu-item>
+        <md-icon>fingerprint</md-icon>
+        <span>Login</span>
+      </button>
+      <button md-menu-item disabled>
+        <md-icon>announcement</md-icon>
+        <span>Issues</span>
+      </button>
+      <button md-menu-item>
+        <md-icon>notifications_off</md-icon>
+        <span>Disable Alerts</span>
+      </button>
+    </md-menu>
+</md-toolbar>
+
+<md-sidenav-container>
+  <md-sidenav #sidenav mode="over" opened="true"> 
+    <md-nav-list>
+      <md-list-item routerLink="/input" routerLinkActive="active-link" (click)="sidenav.close()">
+        <md-icon md-list-icon>assignment</md-icon> 
+        <a md-line>Input Data</a>
+      </md-list-item>
+      <md-list-item routerLink="/analyze" routerLinkActive="active-link" (click)="sidenav.close()">
+        <md-icon md-list-icon>insert_chart</md-icon> 
+        <a md-line>Analyze Data</a>
+      </md-list-item>
+      <md-list-item routerLink="/users" routerLinkActive="active-link" (click)="sidenav.close()">
+        <md-icon md-list-icon>group</md-icon>
+        <a md-line>Handle Users</a>
+      </md-list-item>
+      <md-list-item  routerLink="/settings" routerLinkActive="active-link" (click)="sidenav.close()">
+        <md-icon md-list-icon>settings</md-icon>
+        <a md-line>Settings</a>
+      </md-list-item>
+    </md-nav-list>
+  </md-sidenav>
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
+  <!--<md-tab-group>
+    <md-tab label="Gallery">
+      <md-grid-list cols="4" row--min-hight="300px">
+        <md-grid-tile *ngFor="let spaceScreen of spaceScreens; let i = index ">
+          <img md-card-image src="{{ spaceScreen.img }}">
+          
+          <md-grid-tile-footer>
+            <md-card-content>
+              <p>{{ spaceScreen.description }}</p>
+            </md-card-content>
+            <md-card-actions>
+              <button md-button (click)="likeMe(i)">
+                <md-icon [class.red-color]="spaceScreen.liked === true">favorite</md-icon> LIKE
+              </button>
+              <button md-button (click)="deleteMe(i)">
+                <md-icon>delete</md-icon> DELETE
+              </button>
+            </md-card-actions>
+          </md-grid-tile-footer>
+
+        </md-grid-tile>
+      </md-grid-list>
+    </md-tab>
+    <md-tab label="Settings">
+      <div id = "page-padding">
+        <h1>Settings</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <label>#Thumnails</label><br>
+
+        <md-slider class="md-slider-horizontal" ngModel=maxStuff showTicks="true" max="5" min="0" step="1" thumbLabel="true" value="5"></md-slider>
+        <md-slide-toggle>Some Setting</md-slide-toggle>
+      </div>
+    </md-tab>
+  </md-tab-group>-->
+  </md-sidenav-container>

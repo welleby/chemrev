@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/core/theming/prebuilt/indigo-pink.css";
+
+.spacer {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.red-color {
+    color:red;
+}
+
+.md-slider-horizontal {
+    width: 100%;
+}
+
+label {
+    font-weight: bold;
+    margin:1.5em 0;
+    display: block;
+}
+#page-padding {
+    padding: 0 1.5em 1.5em 1.5em;
+}
+
+
+.icon_35 {
+    font-size: 35px;
+    display: block;
+}
+
+.icon-chems{
+    width: 30px;
+    height: 30px;
+    padding-left: 1.5em;
+    padding-right: 0.5em;
+}
+
+html, body, material-app, md-sidenav-container, .main-content {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.active-link {
+    background: lightseagreen;
+}

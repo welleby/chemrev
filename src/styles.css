@@ -37,10 +37,11 @@ label {
 }
 
 .icon-chems{
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     padding-left: 1.5em;
     padding-right: 0.5em;
+    filter: brightness(130%) hue-rotate(170deg);
 }
 html {
     margin: 0;

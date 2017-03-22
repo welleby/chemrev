@@ -41,7 +41,7 @@ label {
     height: 40px;
     padding-left: 1.5em;
     padding-right: 0.5em;
-    filter: brightness(130%) hue-rotate(170deg);
+    filter: brightness(115%) hue-rotate(180deg);
 }
 html {
     margin: 0;

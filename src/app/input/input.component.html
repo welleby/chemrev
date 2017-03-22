@@ -1,3 +1,14 @@
-<p>
-  input works!
-</p>
+<!--<div class="center-content">-->
+  <h1>
+    input works!
+  </h1>
+  <md-input-container floatPlaceholder="always" >
+    <br>
+    <input mdInput placeholder="Area" [mdAutocomplete]="autoComplete" [formControl]="myControl">
+  </md-input-container>
+  <md-autocomplete #autoComplete="mdAutocomplete">
+    <md-option *ngFor="let option of filteredOptions | async" [value]="option">
+      {{ option }}
+    </md-option>
+  </md-autocomplete>
+<!--</div>-->

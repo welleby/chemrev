@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpModule,JsonpModule  } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -10,10 +10,12 @@ import { InputComponent } from './input/input.component';
 import { AnalyzeComponent } from './analyze/analyze.component';
 import { UsersComponent } from './users/users.component';
 import { SettingsComponent } from './settings/settings.component';
+import { EquipmentComponent } from './equipment/equipment.component';
 
 const appRoutes: Routes = [
   { path: 'input', component: InputComponent },
   { path: 'analyze', component: AnalyzeComponent },
+  { path: 'equipment', component: EquipmentComponent },
   { path: 'users', component: UsersComponent },
   { path: 'settings', component: SettingsComponent },
   { path: '', redirectTo: '/input', pathMatch:"full" }
@@ -25,11 +27,13 @@ const appRoutes: Routes = [
     InputComponent,
     AnalyzeComponent,
     UsersComponent,
-    SettingsComponent
+    SettingsComponent,
+    EquipmentComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     JsonpModule,
     RouterModule.forRoot(appRoutes),

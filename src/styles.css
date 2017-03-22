@@ -57,11 +57,10 @@ app-root{
 md-sidenav-container{
     margin:0;
     height: inherit;
+    overflow: hidden;
 }
 
 .main-content {
-    padding-left:2em;
-    padding-top: 0.5em;
     margin:0px;
     height: 100%;
     overflow: hidden;

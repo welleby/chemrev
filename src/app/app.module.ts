@@ -11,6 +11,9 @@ import { AnalyzeComponent } from './analyze/analyze.component';
 import { UsersComponent } from './users/users.component';
 import { SettingsComponent } from './settings/settings.component';
 import { EquipmentComponent } from './equipment/equipment.component';
+import { ScreenshotService } from "app/screenshot.service";
+import { IScreenshotService } from "app/iscreenshot-service";
+
 
 const appRoutes: Routes = [
   { path: 'input', component: InputComponent },
@@ -39,7 +42,9 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     MaterialModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    {provide: IScreenshotService, useClass: ScreenshotService }
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

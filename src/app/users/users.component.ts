@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ScreenshotService } from "app/screenshot.service";
+import { IScreenshotService } from "app/iscreenshot-service";
+
 import { Http } from "@angular/http";
 
 @Component({
@@ -9,12 +10,11 @@ import { Http } from "@angular/http";
 })
 export class UsersComponent implements OnInit {
 
-  screenshotService;
   maxStuff:number;
   spaceScreens: Array<any>;
 
-    constructor(private http:Http) {
-      this.screenshotService = new ScreenshotService(http);
+    constructor(private screenshotService : IScreenshotService) {
+      
     };
 
     ngOnInit(): void {

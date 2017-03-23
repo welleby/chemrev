@@ -10,6 +10,6 @@ import 'hammerjs';
 })
 export class AppComponent  {
 
-  title = 'Chemical Measurements';
+  title = 'Chemical Review';
   
 }

@@ -1,0 +1,22 @@
+{
+  "equipments": [
+      {
+        "id" : 1,
+        "area": "SFAB",
+        "name": "OP330",
+        "vin": 82762
+      },
+      {
+        "id" : 2,
+        "area": "SFAB",
+        "name": "OP550",
+        "vin": 82766
+      },
+      {
+        "id" : 3,
+        "area": "OFAB",
+        "name": "OP100",
+        "vin": 77985
+      }
+  ]
+}

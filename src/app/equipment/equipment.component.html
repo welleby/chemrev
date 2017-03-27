@@ -1,6 +1,12 @@
 <md-tab-group>
   <md-tab label="Areas">
-
+    <ul>
+        <!-- this is the new syntax for ng-repeat -->
+        Names:
+        <li *ngFor="let equipment of equipments">
+          Name: {{equipment.name}}
+        </li>
+      </ul>
   </md-tab>
   <md-tab label="Operations">
 

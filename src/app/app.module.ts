@@ -13,6 +13,7 @@ import { SettingsComponent } from './settings/settings.component';
 import { EquipmentComponent } from './equipment/equipment.component';
 import { ScreenshotService } from "app/screenshot.service";
 import { IScreenshotService } from "app/iscreenshot-service";
+import { EquipmentService } from "app/equipment/equipment.service";
 
 
 const appRoutes: Routes = [
@@ -43,7 +44,8 @@ const appRoutes: Routes = [
     MaterialModule.forRoot()
   ],
   providers: [
-    {provide: IScreenshotService, useClass: ScreenshotService }
+    {provide: IScreenshotService, useClass: ScreenshotService },
+    EquipmentService
     ],
   bootstrap: [AppComponent]
 })

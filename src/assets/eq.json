@@ -1,22 +1,44 @@
-{
-  "equipments": [
-      {
-        "id" : 1,
-        "area": "SFAB",
-        "name": "OP330",
-        "vin": 82762
-      },
-      {
-        "id" : 2,
-        "area": "SFAB",
-        "name": "OP550",
-        "vin": 82766
-      },
-      {
-        "id" : 3,
-        "area": "OFAB",
-        "name": "OP100",
-        "vin": 77985
-      }
-  ]
-}
+[
+  {
+    "_id": {
+      "timestamp": 1490617392,
+      "machineIdentifier": 1622024,
+      "processIdentifier": -27404,
+      "counter": 14152625,
+      "date": 1490617392000,
+      "time": 1490617392000,
+      "timeSecond": 1490617392
+    },
+    "area": "SFAB",
+    "littra": 132132,
+    "name": "OP200"
+  },
+  {
+    "_id": {
+      "timestamp": 1490617401,
+      "machineIdentifier": 1622024,
+      "processIdentifier": -27404,
+      "counter": 14152626,
+      "date": 1490617401000,
+      "time": 1490617401000,
+      "timeSecond": 1490617401
+    },
+    "area": "SFAB",
+    "littra": 9932,
+    "name": "OP220"
+  },
+  {
+    "_id": {
+      "timestamp": 1490617401,
+      "machineIdentifier": 1622024,
+      "processIdentifier": -27404,
+      "counter": 14152626,
+      "date": 1490617401000,
+      "time": 1490617401000,
+      "timeSecond": 1490617401
+    },
+    "area": "OFAB",
+    "littra": 9921,
+    "name": "OP223"
+  }
+]

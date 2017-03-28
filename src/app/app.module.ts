@@ -11,9 +11,15 @@ import { AnalyzeComponent } from './analyze/analyze.component';
 import { UsersComponent } from './users/users.component';
 import { SettingsComponent } from './settings/settings.component';
 import { EquipmentComponent } from './equipment/equipment.component';
+
+
+//Services
 import { ScreenshotService } from "app/screenshot.service";
 import { IScreenshotService } from "app/iscreenshot-service";
-import { EquipmentService } from "app/equipment/equipment.service";
+import { EquipmentService } from "app/services/equipment/equipment.service";
+import { IEquipmentService } from "app/services/equipment/iequipment.service";
+import { EquipmentDummyService } from "app/services/equipment/equipment.dummy.service";
+import { AreaService } from 'app/services/area/area.service';
 
 
 const appRoutes: Routes = [
@@ -45,7 +51,8 @@ const appRoutes: Routes = [
   ],
   providers: [
     {provide: IScreenshotService, useClass: ScreenshotService },
-    EquipmentService
+    {provide: IEquipmentService, useClass: EquipmentService },
+    AreaService,
     ],
   bootstrap: [AppComponent]
 })

@@ -3,15 +3,28 @@
     <ul>
         <!-- this is the new syntax for ng-repeat -->
         Names:
-        <li *ngFor="let equipment of equipments">
-          Name: {{equipment.name}}
+        <li *ngFor="let area of areas">
+          Id: {{area._id}}
+          Name: {{area.name}}
         </li>
       </ul>
   </md-tab>
-  <md-tab label="Operations">
-
+  <md-tab label="Equipment">
+    <ul>
+        <!-- this is the new syntax for ng-repeat -->
+        Names:
+        <li *ngFor="let equipment of equipments">
+          Id: {{equipment._id}}
+          Name: {{equipment.name}}
+          Littra: {{equipment.littra}}
+          Area: {{equipment.area}}
+        </li>
+      </ul>
   </md-tab>
-  <md-tab label="VIN">
+  <md-tab label="Chemicals">
+    
+  </md-tab>
+  <md-tab label="Measurements">
     
   </md-tab>
 </md-tab-group>

@@ -1,6 +1,6 @@
 export class Equipment {
-    id: number;
-    vin: number;
+    _id: string;
+    littra: number;
     area: string;
     name: string;
 }

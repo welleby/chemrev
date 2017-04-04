@@ -1,10 +1,42 @@
 <!--<div class="center-content">-->
-  <h1>
-    input works!
-  </h1>
   <md-input-container floatPlaceholder="always" >
     <br>
     <input mdInput placeholder="Area" [mdAutocomplete]="autoComplete" [formControl]="myControl">
+  </md-input-container>
+  <md-input-container floatPlaceholder="always" >
+    <br>
+    <input mdInput placeholder="Operation" [mdAutocomplete]="autoComplete" [formControl]="myControl">
+  </md-input-container>
+  <md-input-container floatPlaceholder="always" >
+    <br>
+    <input mdInput placeholder="Chemical" [mdAutocomplete]="autoComplete" [formControl]="myControl">
+  </md-input-container>
+  
+  <br>
+
+  <md-input-container floatPlaceholder="always" >
+    <br>
+    <input mdInput placeholder="pH" [mdAutocomplete]="autoComplete" [formControl]="myControl">
+  </md-input-container>
+  <md-input-container floatPlaceholder="always" >
+    <br>
+    <input mdInput placeholder="Concentration" [mdAutocomplete]="autoComplete" [formControl]="myControl">
+  </md-input-container>
+  <md-input-container floatPlaceholder="always" >
+    <br>
+    <input mdInput placeholder="Oil mixture" [mdAutocomplete]="autoComplete" [formControl]="myControl">
+  </md-input-container>
+  <md-input-container floatPlaceholder="always" >
+    <br>
+    <input mdInput placeholder="Fungus/Bacteria" [mdAutocomplete]="autoComplete" [formControl]="myControl">
+  </md-input-container>
+  <md-input-container floatPlaceholder="always" >
+    <br>
+    <input mdInput placeholder="Rust" [mdAutocomplete]="autoComplete" [formControl]="myControl">
+  </md-input-container>
+  <md-input-container floatPlaceholder="always" >
+    <br>
+    <input type="text" mdInput placeholder="Comment">
   </md-input-container>
   <md-autocomplete #autoComplete="mdAutocomplete">
     <md-option *ngFor="let option of filteredOptions | async" [value]="option">
